@@ -1,3 +1,15 @@
-<h2>Olympic games app</h2>
-<hr />
-<p>{{ (olympics$ | async)?.length }} data loaded</p>
+<main class="main home__main">
+    <header class="home-main__header">
+        <app-title [title]="'Medals Per Country'"></app-title>
+    </header>
+    <section class="home-main__numbers">
+        <app-message></app-message>
+        <app-message></app-message>
+    </section>
+    <section class="home-main__chart">
+        <app-chart></app-chart>
+    </section>
+</main>
+
+
+

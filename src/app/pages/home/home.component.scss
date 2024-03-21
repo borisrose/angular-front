@@ -1,0 +1,39 @@
+@mixin flex-box($dir:row, $align:flex-start, $justif:flex-start) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $align;
+    justify-content: $justif;
+}
+
+
+.home {
+    &__main {
+        @include flex-box(column);
+    }
+
+
+}
+
+.home-main {
+
+    &__header {
+        @include flex-box(row,center, center);
+        border: solid red 2px;
+        align-self: center
+    }
+
+
+    &__numbers {
+        @include flex-box(row, center, space-between);
+        border: solid green 2px;
+        align-self: center;
+    }
+
+    
+    
+    &__chart {
+    
+    }
+
+}
+

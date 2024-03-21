@@ -1,0 +1,20 @@
+<article
+  class="message-component message-component--2-data"
+  *ngIf="data.type == '2-data'"
+>
+  <p>{{ data.mainIdea }}</p>
+  <p>{{ data.content }}</p>
+</article>
+<article
+  class="message-component message-component--notif"
+  *ngIf="data.type == 'notification'"
+>
+  <p>{{ data.content }}</p>
+</article>
+<article
+  class="message-component message-component--popup"
+  *ngIf="data.type == 'popup'"
+>
+<p>{{ data.mainIdea }}</p>
+  <p>{{ data.content }}</p>
+</article>
