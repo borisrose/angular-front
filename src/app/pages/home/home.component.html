@@ -1,13 +1,13 @@
 <main class="main home__main">
     <header class="home-main__header">
-        <app-title [title]="'Medals Per Country'"></app-title>
+        <app-title [title]="'Medals Per Country'" [destination]="'home'"></app-title>
     </header>
-    <section class="home-main__numbers">
-        <app-message></app-message>
-        <app-message></app-message>
+    <section class="home-main__numbers" *ngIf="josData && countriesData">
+        <app-message [data]="josData"></app-message>
+        <app-message [data]="countriesData"></app-message>
     </section>
     <section class="home-main__chart">
-        <app-chart></app-chart>
+        <app-chart [chartOptions]="chartOptions" class="chart"></app-chart>
     </section>
 </main>
 

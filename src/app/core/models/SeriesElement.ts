@@ -1,5 +1,22 @@
-export interface SeriesElement {
+export interface SeriesPieElement {
     type:string;
-    xKey:string;
-    yKey:string;
+    angleKey:string;
+    calloutLabelyKey:string;
+    sectorLabel: {
+        color:string,
+        fontWeight:string
+    }
+    tooltip: {
+        rendered:Function
+        interaction: {
+            enabled:boolean
+        }
+    }
 }
+
+export interface SeriesLineElement {
+    type:string,
+    xKey:string,
+    yKey:string
+}
+

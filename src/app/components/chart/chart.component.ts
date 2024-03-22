@@ -9,9 +9,10 @@ import { ChartOptions } from 'src/app/core/models/ChartOptions';
 export class ChartComponent implements OnInit {
 
   @Input() chartOptions!:ChartOptions
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+
   }
 
 }

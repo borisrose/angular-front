@@ -1,7 +1,10 @@
+import { CountryMedals } from "./CountryMedals"
+import { LineFormattedData } from "./LineFormattedData"
 import { Olympic } from "./Olympic"
-import { SeriesElement } from "./SeriesElement"
+import { SeriesLineElement, SeriesPieElement } from "./SeriesElement"
 
 export interface ChartOptions {
-    data:Array<Olympic>
-    series:Array<SeriesElement | any>
+    data?:Array<CountryMedals | LineFormattedData>
+    series:Array<SeriesPieElement | SeriesLineElement | any>
+    axes?:Array<any>
 }

@@ -10,10 +10,11 @@ import { TitleComponent } from './components/title/title.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { AgChartsAngular } from 'ag-charts-angular';
 import { HeaderComponent } from './layouts/header/header.component';
+import { DetailsComponent } from './pages/details/details.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent, MessageComponent, TitleComponent, ChartComponent, HeaderComponent],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, MessageComponent, TitleComponent, ChartComponent, HeaderComponent, DetailsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, AgChartsAngular],
   providers: [],
   bootstrap: [AppComponent],

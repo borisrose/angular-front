@@ -5,6 +5,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-inline: 20px;
+        padding: 10px;
+        border: solid 2px rgb(15, 133, 135);
+        border-radius:5px;
+        p {
+            margin: 0;
+            text-align: center;
+        }
+        p + p {
+            font-weight: bold;
+        }
     }
 
     &--notif {

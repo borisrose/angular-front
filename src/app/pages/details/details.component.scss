@@ -6,16 +6,16 @@
 }
 
 
-.home {
+.details {
     &__main {
-        @include flex-box(column, center, center);
+        @include flex-box(column, center);
         height: 100vh;
     }
 
 
 }
 
-.home-main {
+.details-main {
 
     &__header {
         @include flex-box(row,center, center);
@@ -31,15 +31,13 @@
 
     
     
-    &__chart {
+    &__charts {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-
-
-       
-    
+        height: 500px;
+  
     }
 
 }

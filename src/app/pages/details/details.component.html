@@ -1,0 +1,16 @@
+<main class="main details__main">
+    <header class="details-main__header">
+        <app-title [title]="country"
+        [destination]="'details'"
+    ></app-title>
+    </header>
+    <section class="details-main__numbers" *ngIf="entriesData && medalsData && athletesData">
+        <app-message [data]="entriesData"></app-message>
+        <app-message [data]="medalsData"></app-message>
+        <app-message [data]="athletesData"></app-message>
+    </section>
+    <section class="details-main__charts" *ngIf="chartOptions">
+        <app-chart [chartOptions]="chartOptions" class="chart"></app-chart>
+    </section>
+
+</main>
