@@ -8,6 +8,7 @@ import {
   AgPieSeriesTooltipRendererParams,
 } from "ag-charts-community";
 import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/core/services/notification.service';
 
 
 @Component({
@@ -23,10 +24,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   public countriesCount!: number
   public countriesData!: { mainIdea: string, content: number, type: "2-data" }
   olympicsSubscription!: Subscription
-  constructor(private olympicService: OlympicService, private router:Router) {
+  constructor(
+    private notificationService: NotificationService,
+    private olympicService: OlympicService, 
+    private router:Router) {
 }
 
   ngOnInit(): void {
+
+    this.notificationService.setNotificationContent({
+      content:"",
+      title:"",
+      type:""
+    })
 
     this.olympics$ = this.olympicService.getOlympics();
 
