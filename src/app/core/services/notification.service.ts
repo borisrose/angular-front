@@ -6,7 +6,7 @@ import { NotificationInterface } from '../models/Notification';
   providedIn: 'root'
 })
 export class NotificationService {
-  private notification$ = new BehaviorSubject<NotificationInterface>({ type: "", content: "" });
+  private notification$ = new BehaviorSubject<NotificationInterface>({ type: "", content: "", title:"" });
   constructor() { }
 
   setNotificationContent(data: NotificationInterface) {

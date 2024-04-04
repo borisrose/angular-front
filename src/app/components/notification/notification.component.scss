@@ -1,0 +1,48 @@
+.notification-component {
+    z-index: 10;
+    position: fixed;
+    bottom: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: solid 1px black;
+    display: flex;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    animation: showUp 500ms ease-in-out forwards;
+    
+
+    &__icon-container {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    &__message-container {
+        padding: 10px;
+        width: 80%;
+        p {
+            margin: 2px;
+        }
+        padding-inline: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

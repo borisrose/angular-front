@@ -1,0 +1,14 @@
+<aside class="notification-component" *ngIf="currentNotif.content">
+    <section class="notification-component__icon-container">
+        <fa-icon [icon]="faIcon"></fa-icon>
+    </section>
+  
+    <section 
+    class="notification-component__message-container" 
+    [ngClass]="currentNotif.type">
+        <p>{{ currentNotif.title }}</p>
+        <p> {{ currentNotif.content }} </p>
+    </section>
+   
+
+</aside>

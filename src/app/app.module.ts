@@ -11,11 +11,13 @@ import { ChartComponent } from './components/chart/chart.component';
 import { AgChartsAngular } from 'ag-charts-angular';
 import { HeaderComponent } from './layouts/header/header.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NotificationComponent } from './components/notification/notification.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent, MessageComponent, TitleComponent, ChartComponent, HeaderComponent, DetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, AgChartsAngular],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, MessageComponent, TitleComponent, ChartComponent, HeaderComponent, DetailsComponent, NotificationComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, AgChartsAngular, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

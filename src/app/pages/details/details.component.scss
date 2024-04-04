@@ -10,6 +10,10 @@
     &__main {
         @include flex-box(column, center);
         height: 100vh;
+        @media (0 <= width <= 714px) {
+            height: 100%;
+         
+        }
     }
 
 
@@ -26,6 +30,11 @@
     &__numbers {
         @include flex-box(row, center, space-between);
         align-self: center;
+        @media (0 <= width <= 714px) {
+            align-self: unset;
+            @include flex-box(column);
+         
+        }
       
     }
 
@@ -46,4 +55,8 @@
 
     width: 50%;
     height:300px;
+    @media (0 <= width <= 714px) {
+        width: 100%;
+    }
+    
 }

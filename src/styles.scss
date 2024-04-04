@@ -9,6 +9,35 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+
+}
+
+
+figure {
+    margin:0;
+    padding:0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+ 
+}
+
+.positive {
+    color: #90ee90;
+}
+
+.negative {
+    color: #f08080;
+}
+
+
+.info {
+    color: #65d7fd;
+}
+@keyframes showRight {
+    
 }
 
 

@@ -1,51 +1,53 @@
-@mixin flex-box($dir:row, $align:flex-start, $justif:flex-start) {
-    display: flex;
-    flex-direction: $dir;
-    align-items: $align;
-    justify-content: $justif;
+@mixin flex-box($dir: row, $align: flex-start, $justif: flex-start) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justif;
 }
+
 
 
 .home {
-    &__main {
-        @include flex-box(column, center, center);
-        height: 100vh;
+  &__main {
+    @include flex-box(column, center, center);
+    height: 100vh;
+    @media (0 <= width <= 714px) {
+      height: 100%;
+   
     }
-
-
+  }
 }
 
 .home-main {
+  &__header {
+    @include flex-box(row, center, center);
+    align-self: center;
+  }
 
-    &__header {
-        @include flex-box(row,center, center);
-        align-self: center
+  &__numbers {
+    @include flex-box(row, center, space-between);
+    align-self: center;
+    @media (0 <= width <= 714px) {
+      align-self: unset;
+      @include flex-box(column);
+   
     }
+  }
 
-
-    &__numbers {
-        @include flex-box(row, center, space-between);
-        align-self: center;
-      
-    }
-
-    
-    
-    &__chart {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-
-       
-    
-    }
-
+  &__chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .chart {
+  width: 50%;
+  height: 300px;
 
-    width: 50%;
-    height:300px;
+  @media (0 <= width <= 714px) {
+    width: 100%;
+ 
+  }
 }
